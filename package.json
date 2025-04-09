@@ -20,7 +20,7 @@
     "Redux",
     "Tailwindcss"
   ],
-  "author": "Ganesh Prasad",
+  "author": "Sanket Deore",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
