@@ -1,0 +1,1171 @@
+{
+	"info": {
+		"_postman_id": "0b5207f1-901a-43c2-8fb5-ab827129134a",
+		"name": "Vihar360 Documentation",
+		"description": "StartFragment\n\nWelcome to the **Vihar360 API Documentation**. This API provides a set of endpoints for managing users, authentication, and property listings in a real estate application.\n\n### **Key Features:**\n\n✅ User authentication (Signup, Signin, Google OAuth, Signout)  \n  \n✅ User profile management (Update, Delete, Fetch user details)  \n  \n✅ Property listings management (Create, Update, Delete, Fetch)  \n  \n✅ Secure access using authentication tokens\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38671941"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "User Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Rohan Singh\",\r\n    \"email\":\"rohan@example.com\",\r\n    \"password\":\"rohan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						},
+						"description": "### Auth Signup\n\nThis endpoint allows users to sign up by providing a username, email, and password.\n\n#### Request Body\n\n- `username` (string) - The username of the user.\n    \n- `email` (string) - The email address of the user.\n    \n- `password` (string) - The password for the user account.\n    \n\n#### Response\n\nThe response for this request is a JSON object with the following schema:\n\n``` json\n\"User created successfully!\"\n\n ```"
+					},
+					"response": [
+						{
+							"name": "User Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"Rohan Singh\",\r\n    \"email\":\"rohan@example.com\",\r\n    \"password\":\"rohan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-L6eB1wqMbc6en7kdswhcSkjY24Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:30:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"User created successfully!\""
+						}
+					]
+				},
+				{
+					"name": "User Signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rohan@example.com\",\r\n    \"password\":\"rohan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						},
+						"description": "The `POST` request is used to sign in to the API at the specified endpoint. The request body should contain the user's email and password in JSON format.\n\n### Request Body\n\n- `email`: (text) The email of the user.\n    \n- `password`: (text) The password of the user.\n    \n\nUpon successful execution, the API returns a `200` status with a JSON response containing user information. The response includes the user's ID, username, email, avatar, creation and update timestamps, and a version field.\n\n### Response\n\n- `Content-Type`: application/json\n    \n- `\"_id\"`: The unique identifier of the user.\n    \n- `\"username\"`: The username of the user.\n    \n- `\"email\"`: The email of the user.\n    \n- `\"avatar\"`: The avatar URL of the user.\n    \n- `\"createdAt\"`: The timestamp of user creation.\n    \n- `\"updatedAt\"`: The timestamp of last update.\n    \n- `\"__v\"`: Version control field."
+					},
+					"response": [
+						{
+							"name": "User Signin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"rohan@example.com\",\r\n    \"password\":\"rohan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/auth/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3ZDFiNjk3N2FkODFlZjg2OGNlYzIzMSIsImlhdCI6MTc0MTc5NzIyNn0.omvv5EeNZPqIUvrD9hGAgyH5vM7nNnO8RNOoJtMf_kg; Path=/; HttpOnly; Secure; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10d-7jgZIwxRI7QX3uKb92wz8xP1wEQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:33:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67d1b6977ad81ef868cec231\",\n    \"username\": \"Rohan Singh\",\n    \"email\": \"rohan@example.com\",\n    \"avatar\": \"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png\",\n    \"createdAt\": \"2025-03-12T16:30:15.985Z\",\n    \"updatedAt\": \"2025-03-12T16:30:15.985Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "User Signout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/signout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"signout"
+							]
+						},
+						"description": "### Sign Out\n\nThis endpoint is used to sign out the current user.\n\n#### Request Body\n\nThis endpoint does not require a request body.\n\n#### Response\n\n- Status: 200\n    \n- Content-Type: application/json"
+					},
+					"response": [
+						{
+							"name": "User Signout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/auth/signout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"auth",
+										"signout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "access_token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b-F2F9tGRLRXKAp70mITd1ozJP6m0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 17:11:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"User has been logged out!\""
+						}
+					]
+				}
+			],
+			"description": "Handles user registration, login, Google authentication, and signout to ensure secure access to the platform."
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Test",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"test"
+							]
+						},
+						"description": "### GET /api/user/test\n\nThis endpoint retrieves test data for a user.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n#### Response\n\nThe response will be in JSON format with the following result:\n\n``` json\n{\n    \"message\": \"Api route is working!\"\n}\n\n ```\n\nThe response will contain a `message` key with a string value."
+					},
+					"response": [
+						{
+							"name": "Test",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"test"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-2lPnh3+0SZLaAFGHBBlvolO7mpQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:38:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Api route is working!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"rohan kumar singh\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/update/67d1b6977ad81ef868cec231",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"update",
+								"67d1b6977ad81ef868cec231"
+							]
+						},
+						"description": "This endpoint is used to update user information with a specific user ID. The HTTP POST request should be sent to [http://localhost:3000/api/user/update/67d1b6977ad81ef868cec231](http://localhost:3000/api/user/update/67d1b6977ad81ef868cec231) with the user information in the request body.\n\n### Request Body\n\n- `username`: (string) The new username for the user.\n    \n\n### Response\n\nUpon successful execution, the endpoint returns a status code of 200 and a JSON object with the updated user information. The response includes the following fields:\n\n- `_id`: The user ID\n    \n- `username`: The updated username\n    \n- `email`: The user's email\n    \n- `avatar`: The user's avatar\n    \n- `createdAt`: Timestamp of user creation\n    \n- `updatedAt`: Timestamp of user information update\n    \n- `__v`: Version key"
+					},
+					"response": [
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\":\"rohan kumar singh\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/update/67d1b6977ad81ef868cec231",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"update",
+										"67d1b6977ad81ef868cec231"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"113-OnbfI8+F3L9MRtDPN9+1/8wzaGw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:43:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67d1b6977ad81ef868cec231\",\n    \"username\": \"rohan kumar singh\",\n    \"email\": \"rohan@example.com\",\n    \"avatar\": \"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png\",\n    \"createdAt\": \"2025-03-12T16:30:15.985Z\",\n    \"updatedAt\": \"2025-03-12T16:43:28.569Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/delete/67d1b6977ad81ef868cec231",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"67d1b6977ad81ef868cec231"
+							]
+						},
+						"description": "This endpoint is used to delete a specific user with the provided user ID.\n\n### Request\n\n- Method: DELETE\n    \n- URL: `http://localhost:3000/api/user/delete/67d1b6977ad81ef868cec231`\n    \n\n### Response\n\nThe response for this request is an empty JSON object with a status code of 200.\n\n``` json\n\"User has been deleted!\"\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/delete/67d1b6977ad81ef868cec231",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"delete",
+										"67d1b6977ad81ef868cec231"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "access_token=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "24"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18-rDjOeSWnv7ZuEJ0hnZNIHD1g4G4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:45:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"User has been deleted!\""
+						}
+					]
+				},
+				{
+					"name": "Get User Listings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/listings/67d1bb247ad81ef868cec236",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"listings",
+								"67d1bb247ad81ef868cec236"
+							]
+						},
+						"description": "# Get User Listings\n\nThis endpoint retrieves the listings for a specific user.\n\n## Request\n\n### HTTP Request\n\n`GET http://localhost:3000/api/user/listings/67d1bb247ad81ef868cec236`\n\n## Response\n\n- Status: 200\n    \n- Content-Type: application/json\n    \n\nExample Response Body:\n\n``` json\n[\n    {\n        \"_id\": \"\",\n        \"name\": \"\",\n        \"description\": \"\",\n        \"address\": \"\",\n        \"regularPrice\": 0,\n        \"bathrooms\": 0,\n        \"bedrooms\": 0,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"\",\n        \"offer\": true,\n        \"imageUrls\": [\"\"],\n        \"userRef\": \"\",\n        \"createdAt\": \"\",\n        \"updatedAt\": \"\",\n        \"__v\": 0\n    }\n]\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Get User Listings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/listings/67d1bb247ad81ef868cec236",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"listings",
+										"67d1bb247ad81ef868cec236"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4867"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1303-VaqOa+xILS55Vc9ARDLXZxrsYpo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 17:04:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec239\",\n        \"name\": \"Elegant 3BHK House Updated\",\n        \"description\": \"A beautifully designed 3BHK house with a spacious garden and garage, located in a peaceful neighborhood.\",\n        \"address\": \"101 Maple Street, Chicago, IL\",\n        \"regularPrice\": 350000,\n        \"bathrooms\": 3,\n        \"bedrooms\": 5,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/house1.jpg\",\n            \"https://example.com/images/house2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.891Z\",\n        \"updatedAt\": \"2025-03-12T16:59:47.498Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23d\",\n        \"name\": \"Cozy 2BHK House\",\n        \"description\": \"A comfortable and well-maintained house with a backyard, perfect for families.\",\n        \"address\": \"505 Cedar Lane, Denver, CO\",\n        \"regularPrice\": 275000,\n        \"bathrooms\": 2,\n        \"bedrooms\": 2,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/house3.jpg\",\n            \"https://example.com/images/house4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23e\",\n        \"name\": \"Penthouse Apartment with Rooftop\",\n        \"description\": \"A stunning 3BHK penthouse with a private rooftop garden and breathtaking city views.\",\n        \"address\": \"606 Skyline Drive, San Francisco, CA\",\n        \"regularPrice\": 950000,\n        \"bathrooms\": 4,\n        \"bedrooms\": 3,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"apartment\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/penthouse1.jpg\",\n            \"https://example.com/images/penthouse2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23f\",\n        \"name\": \"Spacious 1BHK Studio\",\n        \"description\": \"A well-lit and airy 1BHK studio located near a tech hub, perfect for professionals.\",\n        \"address\": \"707 Innovation Park, Austin, TX\",\n        \"regularPrice\": 1100,\n        \"bathrooms\": 1,\n        \"bedrooms\": 1,\n        \"furnished\": true,\n        \"parking\": false,\n        \"type\": \"studio\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/studio5.jpg\",\n            \"https://example.com/images/studio6.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23b\",\n        \"name\": \"Luxury 4BHK Villa\",\n        \"description\": \"A grand villa with breathtaking ocean views, private pool, and modern decor.\",\n        \"address\": \"303 Palm Beach Road, Malibu, CA\",\n        \"regularPrice\": 3200000,\n        \"bathrooms\": 5,\n        \"bedrooms\": 4,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/villa4.jpg\",\n            \"https://example.com/images/villa5.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23a\",\n        \"name\": \"Compact Studio Apartment\",\n        \"description\": \"A cozy studio with modern interiors, ideal for working professionals and students.\",\n        \"address\": \"202 Pine Street, Seattle, WA\",\n        \"regularPrice\": 1000,\n        \"bathrooms\": 1,\n        \"bedrooms\": 1,\n        \"furnished\": true,\n        \"parking\": false,\n        \"type\": \"studio\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/studio3.jpg\",\n            \"https://example.com/images/studio4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec242\",\n        \"name\": \"Luxury Smart Home Villa\",\n        \"description\": \"A futuristic villa equipped with smart home technology, home theater, and automated systems.\",\n        \"address\": \"1010 Tech Avenue, Silicon Valley, CA\",\n        \"regularPrice\": 8200000,\n        \"bathrooms\": 7,\n        \"bedrooms\": 6,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/villa6.jpg\",\n            \"https://example.com/images/villa7.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec240\",\n        \"name\": \"Classic 5BHK Mansion\",\n        \"description\": \"A timeless mansion with vast gardens, a private cinema, and a wine cellar.\",\n        \"address\": \"808 Heritage Street, Beverly Hills, CA\",\n        \"regularPrice\": 7500000,\n        \"bathrooms\": 6,\n        \"bedrooms\": 5,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/mansion1.jpg\",\n            \"https://example.com/images/mansion2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec241\",\n        \"name\": \"Serene Lakefront House\",\n        \"description\": \"A peaceful 4BHK house overlooking a lake, perfect for nature lovers.\",\n        \"address\": \"909 Lakeside Drive, Orlando, FL\",\n        \"regularPrice\": 420000,\n        \"bathrooms\": 3,\n        \"bedrooms\": 4,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/house5.jpg\",\n            \"https://example.com/images/house6.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/67d1bb247ad81ef868cec236",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"67d1bb247ad81ef868cec236"
+							]
+						},
+						"description": "This endpoint makes an HTTP GET request to retrieve user information based on the provided user ID. The response will include details such as the user's ID, username, email, avatar, creation date, update date, and a version field.\n\n### Request Body\n\nThis endpoint does not require a request body.\n\n### Response Body\n\n- `_id` (string): The unique identifier for the user.\n    \n- `username` (string): The username of the user.\n    \n- `email` (string): The email address of the user.\n    \n- `avatar` (string): The URL of the user's avatar.\n    \n- `createdAt` (string): The date and time when the user was created.\n    \n- `updatedAt` (string): The date and time when the user was last updated.\n    \n- `__v` (number): Version control field."
+					},
+					"response": [
+						{
+							"name": "Get User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/67d1bb247ad81ef868cec236",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"67d1bb247ad81ef868cec236"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "269"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10d-raF0idtgikYG25vOUoffeyu5Hlk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 17:07:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67d1bb247ad81ef868cec236\",\n    \"username\": \"Rohan Singh\",\n    \"email\": \"rohan@example.com\",\n    \"avatar\": \"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png\",\n    \"createdAt\": \"2025-03-12T16:49:40.408Z\",\n    \"updatedAt\": \"2025-03-12T16:49:40.408Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			],
+			"description": "Manages user profiles, updates, deletions, and retrieves user-specific data, including their listed properties."
+		},
+		{
+			"name": "Listing",
+			"item": [
+				{
+					"name": "Create Listing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n[\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Elegant 3BHK House\",\r\n    \"description\": \"A beautifully designed 3BHK house with a spacious garden and garage, located in a peaceful neighborhood.\",\r\n    \"address\": \"101 Maple Street, Chicago, IL\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": false,\r\n    \"type\": \"house\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 3,\r\n    \"bathrooms\": 3,\r\n    \"regularPrice\": 350000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/house1.jpg\",\r\n      \"https://example.com/images/house2.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Compact Studio Apartment\",\r\n    \"description\": \"A cozy studio with modern interiors, ideal for working professionals and students.\",\r\n    \"address\": \"202 Pine Street, Seattle, WA\",\r\n    \"sale\": false,\r\n    \"rent\": true,\r\n    \"parking\": false,\r\n    \"furnished\": true,\r\n    \"type\": \"studio\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 1,\r\n    \"bathrooms\": 1,\r\n    \"regularPrice\": 1000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/studio3.jpg\",\r\n      \"https://example.com/images/studio4.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Luxury 4BHK Villa\",\r\n    \"description\": \"A grand villa with breathtaking ocean views, private pool, and modern decor.\",\r\n    \"address\": \"303 Palm Beach Road, Malibu, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"villa\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 4,\r\n    \"bathrooms\": 5,\r\n    \"regularPrice\": 3200000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/villa4.jpg\",\r\n      \"https://example.com/images/villa5.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Modern Downtown Apartment\",\r\n    \"description\": \"A high-rise 2BHK apartment with a city skyline view and world-class amenities.\",\r\n    \"address\": \"404 Central Avenue, Houston, TX\",\r\n    \"sale\": false,\r\n    \"rent\": true,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"apartment\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 2,\r\n    \"bathrooms\": 2,\r\n    \"regularPrice\": 1800,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/apartment3.jpg\",\r\n      \"https://example.com/images/apartment4.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Cozy 2BHK House\",\r\n    \"description\": \"A comfortable and well-maintained house with a backyard, perfect for families.\",\r\n    \"address\": \"505 Cedar Lane, Denver, CO\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": false,\r\n    \"type\": \"house\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 2,\r\n    \"bathrooms\": 2,\r\n    \"regularPrice\": 275000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/house3.jpg\",\r\n      \"https://example.com/images/house4.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Penthouse Apartment with Rooftop\",\r\n    \"description\": \"A stunning 3BHK penthouse with a private rooftop garden and breathtaking city views.\",\r\n    \"address\": \"606 Skyline Drive, San Francisco, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"apartment\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 3,\r\n    \"bathrooms\": 4,\r\n    \"regularPrice\": 950000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/penthouse1.jpg\",\r\n      \"https://example.com/images/penthouse2.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Spacious 1BHK Studio\",\r\n    \"description\": \"A well-lit and airy 1BHK studio located near a tech hub, perfect for professionals.\",\r\n    \"address\": \"707 Innovation Park, Austin, TX\",\r\n    \"sale\": false,\r\n    \"rent\": true,\r\n    \"parking\": false,\r\n    \"furnished\": true,\r\n    \"type\": \"studio\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 1,\r\n    \"bathrooms\": 1,\r\n    \"regularPrice\": 1100,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/studio5.jpg\",\r\n      \"https://example.com/images/studio6.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Classic 5BHK Mansion\",\r\n    \"description\": \"A timeless mansion with vast gardens, a private cinema, and a wine cellar.\",\r\n    \"address\": \"808 Heritage Street, Beverly Hills, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"villa\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 5,\r\n    \"bathrooms\": 6,\r\n    \"regularPrice\": 7500000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/mansion1.jpg\",\r\n      \"https://example.com/images/mansion2.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Serene Lakefront House\",\r\n    \"description\": \"A peaceful 4BHK house overlooking a lake, perfect for nature lovers.\",\r\n    \"address\": \"909 Lakeside Drive, Orlando, FL\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": false,\r\n    \"type\": \"house\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 4,\r\n    \"bathrooms\": 3,\r\n    \"regularPrice\": 420000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/house5.jpg\",\r\n      \"https://example.com/images/house6.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Luxury Smart Home Villa\",\r\n    \"description\": \"A futuristic villa equipped with smart home technology, home theater, and automated systems.\",\r\n    \"address\": \"1010 Tech Avenue, Silicon Valley, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"villa\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 6,\r\n    \"bathrooms\": 7,\r\n    \"regularPrice\": 8200000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/villa6.jpg\",\r\n      \"https://example.com/images/villa7.jpg\"\r\n    ]\r\n  }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/listing/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"listing",
+								"create"
+							]
+						},
+						"description": "### Create Listing\n\nThis endpoint allows you to create a new listing.\n\n#### Request Body\n\n- `userRef` (string) - The reference ID of the user creating the listing.\n    \n- `name` (string) - The name/title of the listing.\n    \n- `description` (string) - A detailed description of the listing.\n    \n- `address` (string) - The address of the listing.\n    \n- `sale` (boolean) - Indicates if the listing is for sale.\n    \n- `rent` (boolean) - Indicates if the listing is for rent.\n    \n- `parking` (boolean) - Indicates if parking is available.\n    \n- `furnished` (boolean) - Indicates if the listing is furnished.\n    \n- `type` (string) - The type of the listing (e.g., house, apartment).\n    \n- `offer` (boolean) - Indicates if there is any special offer.\n    \n- `bedrooms` (number) - The number of bedrooms in the listing.\n    \n- `bathrooms` (number) - The number of bathrooms in the listing.\n    \n- `regularPrice` (number) - The regular price of the listing.\n    \n- `imageUrls` (array of strings) - URLs of images for the listing.\n    \n\n#### Response (201 - Created)\n\nThe response is an array of objects with the following properties:\n\n- `name` (string) - The name/title of the listing.\n    \n- `description` (string) - A detailed description of the listing.\n    \n- `address` (string) - The address of the listing.\n    \n- `regularPrice` (number) - The regular price of the listing.\n    \n- `bathrooms` (number) - The number of bathrooms in the listing.\n    \n- `bedrooms` (number) - The number of bedrooms in the listing.\n    \n- `furnished` (boolean) - Indicates if the listing is furnished.\n    \n- `parking` (boolean) - Indicates if parking is available.\n    \n- `type` (string) - The type of the listing (e.g., house, apartment).\n    \n- `offer` (boolean) - Indicates if there is any special offer.\n    \n- `imageUrls` (array of strings) - URLs of images for the listing.\n    \n- `userRef` (string) - The reference ID of the user who created the listing.\n    \n- `_id` (string) - The unique ID of the created listing.\n    \n- `createdAt` (string) - The timestamp of when the listing was created.\n    \n- `updatedAt` (string) - The timestamp of when the listing was last updated.\n    \n- `__v` (number) - Version key for the listing."
+					},
+					"response": [
+						{
+							"name": "Create Listing",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n[\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Elegant 3BHK House\",\r\n    \"description\": \"A beautifully designed 3BHK house with a spacious garden and garage, located in a peaceful neighborhood.\",\r\n    \"address\": \"101 Maple Street, Chicago, IL\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": false,\r\n    \"type\": \"house\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 3,\r\n    \"bathrooms\": 3,\r\n    \"regularPrice\": 350000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/house1.jpg\",\r\n      \"https://example.com/images/house2.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Compact Studio Apartment\",\r\n    \"description\": \"A cozy studio with modern interiors, ideal for working professionals and students.\",\r\n    \"address\": \"202 Pine Street, Seattle, WA\",\r\n    \"sale\": false,\r\n    \"rent\": true,\r\n    \"parking\": false,\r\n    \"furnished\": true,\r\n    \"type\": \"studio\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 1,\r\n    \"bathrooms\": 1,\r\n    \"regularPrice\": 1000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/studio3.jpg\",\r\n      \"https://example.com/images/studio4.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Luxury 4BHK Villa\",\r\n    \"description\": \"A grand villa with breathtaking ocean views, private pool, and modern decor.\",\r\n    \"address\": \"303 Palm Beach Road, Malibu, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"villa\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 4,\r\n    \"bathrooms\": 5,\r\n    \"regularPrice\": 3200000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/villa4.jpg\",\r\n      \"https://example.com/images/villa5.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Modern Downtown Apartment\",\r\n    \"description\": \"A high-rise 2BHK apartment with a city skyline view and world-class amenities.\",\r\n    \"address\": \"404 Central Avenue, Houston, TX\",\r\n    \"sale\": false,\r\n    \"rent\": true,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"apartment\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 2,\r\n    \"bathrooms\": 2,\r\n    \"regularPrice\": 1800,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/apartment3.jpg\",\r\n      \"https://example.com/images/apartment4.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Cozy 2BHK House\",\r\n    \"description\": \"A comfortable and well-maintained house with a backyard, perfect for families.\",\r\n    \"address\": \"505 Cedar Lane, Denver, CO\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": false,\r\n    \"type\": \"house\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 2,\r\n    \"bathrooms\": 2,\r\n    \"regularPrice\": 275000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/house3.jpg\",\r\n      \"https://example.com/images/house4.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Penthouse Apartment with Rooftop\",\r\n    \"description\": \"A stunning 3BHK penthouse with a private rooftop garden and breathtaking city views.\",\r\n    \"address\": \"606 Skyline Drive, San Francisco, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"apartment\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 3,\r\n    \"bathrooms\": 4,\r\n    \"regularPrice\": 950000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/penthouse1.jpg\",\r\n      \"https://example.com/images/penthouse2.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Spacious 1BHK Studio\",\r\n    \"description\": \"A well-lit and airy 1BHK studio located near a tech hub, perfect for professionals.\",\r\n    \"address\": \"707 Innovation Park, Austin, TX\",\r\n    \"sale\": false,\r\n    \"rent\": true,\r\n    \"parking\": false,\r\n    \"furnished\": true,\r\n    \"type\": \"studio\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 1,\r\n    \"bathrooms\": 1,\r\n    \"regularPrice\": 1100,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/studio5.jpg\",\r\n      \"https://example.com/images/studio6.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Classic 5BHK Mansion\",\r\n    \"description\": \"A timeless mansion with vast gardens, a private cinema, and a wine cellar.\",\r\n    \"address\": \"808 Heritage Street, Beverly Hills, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"villa\",\r\n    \"offer\": false,\r\n    \"bedrooms\": 5,\r\n    \"bathrooms\": 6,\r\n    \"regularPrice\": 7500000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/mansion1.jpg\",\r\n      \"https://example.com/images/mansion2.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Serene Lakefront House\",\r\n    \"description\": \"A peaceful 4BHK house overlooking a lake, perfect for nature lovers.\",\r\n    \"address\": \"909 Lakeside Drive, Orlando, FL\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": false,\r\n    \"type\": \"house\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 4,\r\n    \"bathrooms\": 3,\r\n    \"regularPrice\": 420000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/house5.jpg\",\r\n      \"https://example.com/images/house6.jpg\"\r\n    ]\r\n  },\r\n  {\r\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\r\n    \"name\": \"Luxury Smart Home Villa\",\r\n    \"description\": \"A futuristic villa equipped with smart home technology, home theater, and automated systems.\",\r\n    \"address\": \"1010 Tech Avenue, Silicon Valley, CA\",\r\n    \"sale\": true,\r\n    \"rent\": false,\r\n    \"parking\": true,\r\n    \"furnished\": true,\r\n    \"type\": \"villa\",\r\n    \"offer\": true,\r\n    \"bedrooms\": 6,\r\n    \"bathrooms\": 7,\r\n    \"regularPrice\": 8200000,\r\n    \"imageUrls\": [\r\n      \"https://example.com/images/villa6.jpg\",\r\n      \"https://example.com/images/villa7.jpg\"\r\n    ]\r\n  }\r\n]\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/listing/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"listing",
+										"create"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5404"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"151c-AFKHMkM+UQ1UQAVqwO89I6mNEYU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:52:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"Elegant 3BHK House\",\n        \"description\": \"A beautifully designed 3BHK house with a spacious garden and garage, located in a peaceful neighborhood.\",\n        \"address\": \"101 Maple Street, Chicago, IL\",\n        \"regularPrice\": 350000,\n        \"bathrooms\": 3,\n        \"bedrooms\": 3,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/house1.jpg\",\n            \"https://example.com/images/house2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec239\",\n        \"createdAt\": \"2025-03-12T16:52:09.891Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.891Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Compact Studio Apartment\",\n        \"description\": \"A cozy studio with modern interiors, ideal for working professionals and students.\",\n        \"address\": \"202 Pine Street, Seattle, WA\",\n        \"regularPrice\": 1000,\n        \"bathrooms\": 1,\n        \"bedrooms\": 1,\n        \"furnished\": true,\n        \"parking\": false,\n        \"type\": \"studio\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/studio3.jpg\",\n            \"https://example.com/images/studio4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec23a\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Luxury 4BHK Villa\",\n        \"description\": \"A grand villa with breathtaking ocean views, private pool, and modern decor.\",\n        \"address\": \"303 Palm Beach Road, Malibu, CA\",\n        \"regularPrice\": 3200000,\n        \"bathrooms\": 5,\n        \"bedrooms\": 4,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/villa4.jpg\",\n            \"https://example.com/images/villa5.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec23b\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Modern Downtown Apartment\",\n        \"description\": \"A high-rise 2BHK apartment with a city skyline view and world-class amenities.\",\n        \"address\": \"404 Central Avenue, Houston, TX\",\n        \"regularPrice\": 1800,\n        \"bathrooms\": 2,\n        \"bedrooms\": 2,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"apartment\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/apartment3.jpg\",\n            \"https://example.com/images/apartment4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec23c\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Cozy 2BHK House\",\n        \"description\": \"A comfortable and well-maintained house with a backyard, perfect for families.\",\n        \"address\": \"505 Cedar Lane, Denver, CO\",\n        \"regularPrice\": 275000,\n        \"bathrooms\": 2,\n        \"bedrooms\": 2,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/house3.jpg\",\n            \"https://example.com/images/house4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec23d\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Penthouse Apartment with Rooftop\",\n        \"description\": \"A stunning 3BHK penthouse with a private rooftop garden and breathtaking city views.\",\n        \"address\": \"606 Skyline Drive, San Francisco, CA\",\n        \"regularPrice\": 950000,\n        \"bathrooms\": 4,\n        \"bedrooms\": 3,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"apartment\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/penthouse1.jpg\",\n            \"https://example.com/images/penthouse2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec23e\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Spacious 1BHK Studio\",\n        \"description\": \"A well-lit and airy 1BHK studio located near a tech hub, perfect for professionals.\",\n        \"address\": \"707 Innovation Park, Austin, TX\",\n        \"regularPrice\": 1100,\n        \"bathrooms\": 1,\n        \"bedrooms\": 1,\n        \"furnished\": true,\n        \"parking\": false,\n        \"type\": \"studio\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/studio5.jpg\",\n            \"https://example.com/images/studio6.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec23f\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Classic 5BHK Mansion\",\n        \"description\": \"A timeless mansion with vast gardens, a private cinema, and a wine cellar.\",\n        \"address\": \"808 Heritage Street, Beverly Hills, CA\",\n        \"regularPrice\": 7500000,\n        \"bathrooms\": 6,\n        \"bedrooms\": 5,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/mansion1.jpg\",\n            \"https://example.com/images/mansion2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec240\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Serene Lakefront House\",\n        \"description\": \"A peaceful 4BHK house overlooking a lake, perfect for nature lovers.\",\n        \"address\": \"909 Lakeside Drive, Orlando, FL\",\n        \"regularPrice\": 420000,\n        \"bathrooms\": 3,\n        \"bedrooms\": 4,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/house5.jpg\",\n            \"https://example.com/images/house6.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec241\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"name\": \"Luxury Smart Home Villa\",\n        \"description\": \"A futuristic villa equipped with smart home technology, home theater, and automated systems.\",\n        \"address\": \"1010 Tech Avenue, Silicon Valley, CA\",\n        \"regularPrice\": 8200000,\n        \"bathrooms\": 7,\n        \"bedrooms\": 6,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/villa6.jpg\",\n            \"https://example.com/images/villa7.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"_id\": \"67d1bbb97ad81ef868cec242\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Single Listing",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/listing/get/67d1bbb97ad81ef868cec239",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"listing",
+								"get",
+								"67d1bbb97ad81ef868cec239"
+							]
+						},
+						"description": "### GET /api/listing/get/{listingId}\n\nThis endpoint retrieves details of a specific listing identified by the `listingId`.\n\n#### Request\n\nNo request body parameters are required for this request.\n\n- `listingId` (path parameter) - The unique identifier of the listing.\n    \n\n#### Response\n\nThe response will be a JSON object with the following schema:\n\n``` json\n{\n  \"_id\": \"string\",\n  \"name\": \"string\",\n  \"description\": \"string\",\n  \"address\": \"string\",\n  \"regularPrice\": 0,\n  \"bathrooms\": 0,\n  \"bedrooms\": 0,\n  \"furnished\": true,\n  \"parking\": true,\n  \"type\": \"string\",\n  \"offer\": true,\n  \"imageUrls\": [\"string\"],\n  \"userRef\": \"string\",\n  \"createdAt\": \"string\",\n  \"updatedAt\": \"string\",\n  \"__v\": 0\n}\n\n ```\n\n- `_id` (string) - The unique identifier of the listing.\n    \n- `name` (string) - The name of the listing.\n    \n- `description` (string) - The description of the listing.\n    \n- `address` (string) - The address of the listing.\n    \n- `regularPrice` (number) - The regular price of the listing.\n    \n- `bathrooms` (number) - The number of bathrooms in the listing.\n    \n- `bedrooms` (number) - The number of bedrooms in the listing.\n    \n- `furnished` (boolean) - Indicates if the listing is furnished.\n    \n- `parking` (boolean) - Indicates if parking is available.\n    \n- `type` (string) - The type of the listing.\n    \n- `offer` (boolean) - Indicates if there is an offer available for the listing.\n    \n- `imageUrls` (array of strings) - URLs of images associated with the listing.\n    \n- `userRef` (string) - Reference to the user associated with the listing.\n    \n- `createdAt` (string) - Timestamp indicating when the listing was created.\n    \n- `updatedAt` (string) - Timestamp indicating when the listing was last updated.\n    \n- `__v` (number) - Version key for the listing."
+					},
+					"response": [
+						{
+							"name": "Get Single Listing",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/listing/get/67d1bbb97ad81ef868cec239",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"listing",
+										"get",
+										"67d1bbb97ad81ef868cec239"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "553"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"229-YblW0LXNPHQzRhCDUAKQAA7ZcPo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:55:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67d1bbb97ad81ef868cec239\",\n    \"name\": \"Elegant 3BHK House\",\n    \"description\": \"A beautifully designed 3BHK house with a spacious garden and garage, located in a peaceful neighborhood.\",\n    \"address\": \"101 Maple Street, Chicago, IL\",\n    \"regularPrice\": 350000,\n    \"bathrooms\": 3,\n    \"bedrooms\": 3,\n    \"furnished\": false,\n    \"parking\": true,\n    \"type\": \"house\",\n    \"offer\": false,\n    \"imageUrls\": [\n        \"https://example.com/images/house1.jpg\",\n        \"https://example.com/images/house2.jpg\"\n    ],\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\n    \"createdAt\": \"2025-03-12T16:52:09.891Z\",\n    \"updatedAt\": \"2025-03-12T16:52:09.891Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Listings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/listing/get/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"listing",
+								"get",
+								""
+							]
+						},
+						"description": "### GET /api/listing/get/\n\nThis endpoint retrieves a list of listings.\n\n#### Request\n\nNo request body is required for this request.\n\n#### Response\n\nThe response will be a JSON array containing objects with the following properties:\n\n- `_id` (string): The unique identifier for the listing.\n    \n- `name` (string): The name of the listing.\n    \n- `description` (string): A description of the listing.\n    \n- `address` (string): The address of the listing.\n    \n- `regularPrice` (number): The regular price of the listing.\n    \n- `bathrooms` (number): The number of bathrooms in the listing.\n    \n- `bedrooms` (number): The number of bedrooms in the listing.\n    \n- `furnished` (boolean): Indicates if the listing is furnished.\n    \n- `parking` (boolean): Indicates if parking is available for the listing.\n    \n- `type` (string): The type of the listing.\n    \n- `offer` (boolean): Indicates if there is an offer available for the listing.\n    \n- `imageUrls` (array of strings): URLs of images associated with the listing.\n    \n- `userRef` (string): Reference to the user associated with the listing.\n    \n- `createdAt` (string): The date and time when the listing was created.\n    \n- `updatedAt` (string): The date and time when the listing was last updated.\n    \n- `__v` (number): Version key for the listing object.\n    \n\n``` json\n[\n  {\n    \"_id\": \"\",\n    \"name\": \"\",\n    \"description\": \"\",\n    \"address\": \"\",\n    \"regularPrice\": 0,\n    \"bathrooms\": 0,\n    \"bedrooms\": 0,\n    \"furnished\": true,\n    \"parking\": true,\n    \"type\": \"\",\n    \"offer\": true,\n    \"imageUrls\": [\"\"],\n    \"userRef\": \"\",\n    \"createdAt\": \"\",\n    \"updatedAt\": \"\",\n    \"__v\": 0\n  }\n]\n\n ```"
+					},
+					"response": [
+						{
+							"name": "Get All Listings",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/listing/get/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"listing",
+										"get",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4850"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12f2-+ThjRzAbwQ3/gJTKM4FXALf7ODs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:56:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec240\",\n        \"name\": \"Classic 5BHK Mansion\",\n        \"description\": \"A timeless mansion with vast gardens, a private cinema, and a wine cellar.\",\n        \"address\": \"808 Heritage Street, Beverly Hills, CA\",\n        \"regularPrice\": 7500000,\n        \"bathrooms\": 6,\n        \"bedrooms\": 5,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/mansion1.jpg\",\n            \"https://example.com/images/mansion2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23f\",\n        \"name\": \"Spacious 1BHK Studio\",\n        \"description\": \"A well-lit and airy 1BHK studio located near a tech hub, perfect for professionals.\",\n        \"address\": \"707 Innovation Park, Austin, TX\",\n        \"regularPrice\": 1100,\n        \"bathrooms\": 1,\n        \"bedrooms\": 1,\n        \"furnished\": true,\n        \"parking\": false,\n        \"type\": \"studio\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/studio5.jpg\",\n            \"https://example.com/images/studio6.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23c\",\n        \"name\": \"Modern Downtown Apartment\",\n        \"description\": \"A high-rise 2BHK apartment with a city skyline view and world-class amenities.\",\n        \"address\": \"404 Central Avenue, Houston, TX\",\n        \"regularPrice\": 1800,\n        \"bathrooms\": 2,\n        \"bedrooms\": 2,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"apartment\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/apartment3.jpg\",\n            \"https://example.com/images/apartment4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec242\",\n        \"name\": \"Luxury Smart Home Villa\",\n        \"description\": \"A futuristic villa equipped with smart home technology, home theater, and automated systems.\",\n        \"address\": \"1010 Tech Avenue, Silicon Valley, CA\",\n        \"regularPrice\": 8200000,\n        \"bathrooms\": 7,\n        \"bedrooms\": 6,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/villa6.jpg\",\n            \"https://example.com/images/villa7.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23b\",\n        \"name\": \"Luxury 4BHK Villa\",\n        \"description\": \"A grand villa with breathtaking ocean views, private pool, and modern decor.\",\n        \"address\": \"303 Palm Beach Road, Malibu, CA\",\n        \"regularPrice\": 3200000,\n        \"bathrooms\": 5,\n        \"bedrooms\": 4,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"villa\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/villa4.jpg\",\n            \"https://example.com/images/villa5.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec241\",\n        \"name\": \"Serene Lakefront House\",\n        \"description\": \"A peaceful 4BHK house overlooking a lake, perfect for nature lovers.\",\n        \"address\": \"909 Lakeside Drive, Orlando, FL\",\n        \"regularPrice\": 420000,\n        \"bathrooms\": 3,\n        \"bedrooms\": 4,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/house5.jpg\",\n            \"https://example.com/images/house6.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23e\",\n        \"name\": \"Penthouse Apartment with Rooftop\",\n        \"description\": \"A stunning 3BHK penthouse with a private rooftop garden and breathtaking city views.\",\n        \"address\": \"606 Skyline Drive, San Francisco, CA\",\n        \"regularPrice\": 950000,\n        \"bathrooms\": 4,\n        \"bedrooms\": 3,\n        \"furnished\": true,\n        \"parking\": true,\n        \"type\": \"apartment\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/penthouse1.jpg\",\n            \"https://example.com/images/penthouse2.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23d\",\n        \"name\": \"Cozy 2BHK House\",\n        \"description\": \"A comfortable and well-maintained house with a backyard, perfect for families.\",\n        \"address\": \"505 Cedar Lane, Denver, CO\",\n        \"regularPrice\": 275000,\n        \"bathrooms\": 2,\n        \"bedrooms\": 2,\n        \"furnished\": false,\n        \"parking\": true,\n        \"type\": \"house\",\n        \"offer\": false,\n        \"imageUrls\": [\n            \"https://example.com/images/house3.jpg\",\n            \"https://example.com/images/house4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67d1bbb97ad81ef868cec23a\",\n        \"name\": \"Compact Studio Apartment\",\n        \"description\": \"A cozy studio with modern interiors, ideal for working professionals and students.\",\n        \"address\": \"202 Pine Street, Seattle, WA\",\n        \"regularPrice\": 1000,\n        \"bathrooms\": 1,\n        \"bedrooms\": 1,\n        \"furnished\": true,\n        \"parking\": false,\n        \"type\": \"studio\",\n        \"offer\": true,\n        \"imageUrls\": [\n            \"https://example.com/images/studio3.jpg\",\n            \"https://example.com/images/studio4.jpg\"\n        ],\n        \"userRef\": \"67d1bb247ad81ef868cec236\",\n        \"createdAt\": \"2025-03-12T16:52:09.892Z\",\n        \"updatedAt\": \"2025-03-12T16:52:09.892Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Update Listing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Elegant 3BHK House Updated\",\r\n    \"bedrooms\":\"5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/listing/update/67d1bbb97ad81ef868cec239",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"listing",
+								"update",
+								"67d1bbb97ad81ef868cec239"
+							]
+						},
+						"description": "### Update Listing Details\n\nThis endpoint allows you to update the details of a specific listing.\n\n#### Request Body\n\n- `name`: (string) The updated name of the listing.\n    \n- `bedrooms`: (string) The updated number of bedrooms in the listing.\n    \n\n#### Response\n\nUpon successful update, the server will respond with a status code of 200 and a JSON object containing the updated details of the listing. The response includes the updated `name`, `bedrooms`, `furnished`, `parking`, `imageUrls`, and other listing details."
+					},
+					"response": [
+						{
+							"name": "Update Listing",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Elegant 3BHK House Updated\",\r\n    \"bedrooms\":\"5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/listing/update/67d1bbb97ad81ef868cec239",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"listing",
+										"update",
+										"67d1bbb97ad81ef868cec239"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "561"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"231-OG99cRtoCHiewS0SWaj1mG3vH8E\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 16:59:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"67d1bbb97ad81ef868cec239\",\n    \"name\": \"Elegant 3BHK House Updated\",\n    \"description\": \"A beautifully designed 3BHK house with a spacious garden and garage, located in a peaceful neighborhood.\",\n    \"address\": \"101 Maple Street, Chicago, IL\",\n    \"regularPrice\": 350000,\n    \"bathrooms\": 3,\n    \"bedrooms\": 5,\n    \"furnished\": false,\n    \"parking\": true,\n    \"type\": \"house\",\n    \"offer\": false,\n    \"imageUrls\": [\n        \"https://example.com/images/house1.jpg\",\n        \"https://example.com/images/house2.jpg\"\n    ],\n    \"userRef\": \"67d1bb247ad81ef868cec236\",\n    \"createdAt\": \"2025-03-12T16:52:09.891Z\",\n    \"updatedAt\": \"2025-03-12T16:59:47.498Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Listing",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/listing/delete/67d1bbb97ad81ef868cec23c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"listing",
+								"delete",
+								"67d1bbb97ad81ef868cec23c"
+							]
+						},
+						"description": "This endpoint is used to delete a specific listing identified by its unique ID. The HTTP DELETE request should be sent to [http://localhost:3000/api/listing/delete/67d1bbb97ad81ef868cec23c](http://localhost:3000/api/listing/delete/67d1bbb97ad81ef868cec23c).\n\n### Request Body\n\nThis request does not require a request body.\n\n### Response\n\nUpon successful deletion, the server will respond with a status code of 200 and an empty JSON response."
+					},
+					"response": [
+						{
+							"name": "Delete Listing",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/listing/delete/67d1bbb97ad81ef868cec23c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"listing",
+										"delete",
+										"67d1bbb97ad81ef868cec23c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "27"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b-ILou5sCmSxmtkN89DRSYSLC3FrM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 12 Mar 2025 17:01:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Listing has been deleted!\""
+						}
+					]
+				}
+			],
+			"description": "Provides endpoints for creating, updating, deleting, and fetching real estate property listings for buyers and sellers."
+		}
+	]
+}
